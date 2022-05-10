@@ -25,3 +25,36 @@ function createEmployee(salary: number | string): TeacherInterface | DirectorInt
     }
     return new Director()
 }
+function isDirector(employee: DirectorInterface | TeacherInterface): boolean {
+	return (employee instanceof Director);
+}
+
+function executeWork(employee: DirectorInterface | TeacherInterface): string {
+	if (employee instanceof Director) {
+		return employee.workDirectorTasks();
+	} else if (employee instanceof Teacher) {
+		return employee.workTeacherTasks();
+	}
+}
+
+type Subjects = "Math" | "History";
+
+function teachClass(todayClass:Subjects): string {
+	if (todayClass === "Math") {
+		return `Teaching Math`;
+	} else if (todayClass === "History") {
+		return `Teaching History`;
+	}
+}
+
+// console.log(teachClass('Math'));
+// console.log(teachClass('History'));
+
+export {
+	Director,
+	Teacher,
+	createEmployee,
+	isDirector,
+	executeWork,
+	teachClass,
+}

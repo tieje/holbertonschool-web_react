@@ -1,0 +1,7 @@
+#logo {
+  width: 200px;
+  height: 200px;
+  background: url("../../assets/holberton-logo.jpeg");
+  background-position: center;
+  background-size: contain;
+}

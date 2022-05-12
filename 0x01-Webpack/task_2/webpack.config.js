@@ -25,7 +25,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: "Task 1",
+            title: "Task 2",
         }),
     ],
     mode: 'production',

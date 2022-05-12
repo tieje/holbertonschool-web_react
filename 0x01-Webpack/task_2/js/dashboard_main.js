@@ -2,7 +2,7 @@ import $ from 'jquery'
 import _ from 'lodash'
 import '../css/main.css'
 
-let count = 0
+let count = 0;
 function updateCounter() {
     count += 1;
     return count;

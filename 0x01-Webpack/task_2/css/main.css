@@ -1,7 +1,7 @@
 button {
   text-align: right;
 }
-button > span {
+#count {
   font-style: normal;
   font-weight: bold;
 }

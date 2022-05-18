@@ -2,11 +2,11 @@ import './App.css';
 import HB_LOGO from './assets/hb_logo.jpeg'
 import { getFooterCopy, getFullYear } from './utils';
 
-function App() {
+const App = () => {
   const currentYear = getFullYear();
   return (
     <div className='relative h-screen'>
-      <header className='flex flex-row border-b-4 border-red-500'>
+      <header className='flex flex-row border-b-4 border-red-500' data-testid='App-header'>
         <img
           className=''
           src={HB_LOGO}
@@ -18,7 +18,7 @@ function App() {
           School dashboard
         </h1>
       </header>
-      <main className='pl-16'>
+      <main className='pl-16' data-testid='App-body'>
         <p className='grid text-2xl h-52 content-center'>
           Login to access the full dashboard
         </p>
@@ -32,7 +32,10 @@ function App() {
           </button>
         </form>
       </main>
-      <footer className='absolute bottom-8 border-t-4 border-red-500 w-screen grid place-content-center pt-6'>
+      <footer
+        className='absolute bottom-8 border-t-4 border-red-500 w-screen grid place-content-center pt-6'
+        data-testid='App-footer'
+      >
         <p className='text-2xl italic'
         >Copyright {currentYear} - {getFooterCopy(true)}</p>
       </footer>

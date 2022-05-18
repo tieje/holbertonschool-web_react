@@ -3,3 +3,12 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+
+/*
+//Enzyme is dead. I'm going to use React Testing Library
+//https://dev.to/wojtekmaj/enzyme-is-dead-now-what-ekl
+
+import { configure, EnzymeAdapter } from 'enzyme';
+
+configure({ adapter: new EnzymeAdapter() })
+*/

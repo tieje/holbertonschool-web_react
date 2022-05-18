@@ -17,13 +17,13 @@ const Notifications = () => {
                 Here is the list of notifications
             </p>
             <ul className='grid gap-1 pl-10'>
-                <li className='text-blue-700' data-priority='default'>
+                <li className='text-blue-700' data-priority='default' data-testid='notification'>
                     New course available
                 </li>
-                <li className='text-red-700' data-priority='urgent'>
+                <li className='text-red-700' data-priority='urgent' data-testid='notification'>
                     New course available
                 </li>
-                <li className='text-red-500' dangerouslySetInnerHTML={{ __html: getLatestNotification()}}>
+                <li className='text-red-500' dangerouslySetInnerHTML={{ __html: getLatestNotification() }} data-testid='notification'>
                 </li>
             </ul>
         </div>

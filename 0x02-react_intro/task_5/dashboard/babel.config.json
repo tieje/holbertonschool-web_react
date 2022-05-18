@@ -1,0 +1,6 @@
+// It looks like .babelrc.json has been relegated file-relative configuration.
+// babel.config.json is now used for project-wide configuration.
+// https://babeljs.io/docs/en/config-files#file-relative-configuration
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}

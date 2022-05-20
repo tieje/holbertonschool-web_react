@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import AppHeader from './Header'
 
-it('<App /> render', () => {
+it('<App /> renders', () => {
     render(<AppHeader />)
     expect(screen.getByText('School dashboard')).toBeInTheDocument()
 })

@@ -2,6 +2,9 @@
 const AppLogin = () => {
     return (
         <>
+            <p className='grid text-2xl h-52 åcontent-center'>
+                Login to access the full dashboard
+            </p>
             <label
                 htmlFor='email'
                 data-testid='login-label'

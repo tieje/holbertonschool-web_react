@@ -2,6 +2,7 @@ import './Notifications.css'
 import NotificationItem, { NotificationItemPropsType } from './NotificationItem'
 import { NOTIFICATIONS_STATE } from '../State/State'
 import { nanoid } from 'nanoid'
+
 const Notifications = () => {
     function handleClick() {
         console.log('Close button has been clicked')

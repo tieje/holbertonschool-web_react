@@ -1,30 +1,31 @@
-export type CourseListPropsType = {
-    isHeader: boolean
-    textFirstCell: string
-    textSecondCell?: string
-}
+import { COURSELIST_TBODY_ROW_1, COURSELIST_TBODY_ROW_2, COURSELIST_TBODY_ROW_3, COURSELIST_THEAD_ROW_1, COURSELIST_THEAD_ROW_2 } from "../State/State"
+import CourseListRow from "./CourseListRow"
+//import './CourseList.css'
+
 export const COURSE_LIST_TEST_IDS = {
-    textSecondCell_IS_UNDEFINED: 'textSecondCell is undefined',
+    courseListTable: 'courseListTable'
 }
-const CourseList = ({ props }: { props: CourseListPropsType }) => {
+
+const CourseList = () => {
     return (
-        <table>
-            <tr>
-                {props.isHeader === true && props.textSecondCell === undefined ?
-                    <th colSpan={2} data-testid={COURSE_LIST_TEST_IDS.textSecondCell_IS_UNDEFINED}>
-                        {props.textFirstCell}
-                    </th> : null}
-                {props.isHeader === true && props.textSecondCell !== undefined ?
-                    <>
-                        <th>{props.textFirstCell}</th>
-                        <th>{props.textSecondCell}</th>
-                    </> : null}
-                {props.isHeader === false ?
-                    <>
-                        <td>{props.textFirstCell}</td>
-                        <td>{props.textSecondCell}</td>
-                    </> : null}
-            </tr>
+        <table
+            className='border border-black'
+            id='CourseList'
+            data-testid={COURSE_LIST_TEST_IDS.courseListTable}
+        >
+            <thead
+                className='border border-black'
+            >
+                <CourseListRow props={COURSELIST_THEAD_ROW_1} />
+                <CourseListRow props={COURSELIST_THEAD_ROW_2} />
+            </thead>
+            <tbody
+                className='border border-black'
+            >
+                <CourseListRow props={COURSELIST_TBODY_ROW_1} />
+                <CourseListRow props={COURSELIST_TBODY_ROW_2} />
+                <CourseListRow props={COURSELIST_TBODY_ROW_3} />
+            </tbody>
         </table>
     )
 }

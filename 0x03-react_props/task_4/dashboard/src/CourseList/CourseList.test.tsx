@@ -2,13 +2,25 @@
 //https://dev.to/wojtekmaj/enzyme-is-dead-now-what-ekl
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import CourseList, { CourseListPropsType, COURSE_LIST_TEST_IDS } from './CourseList'
+import CourseList from './CourseList'
 
-it('Render a cell with colspan = 2 when textSecondCell is undefined', () => {
-    const propsTest: CourseListPropsType = {
-        isHeader: true,
-        textFirstCell: 'first',
-    }
-    render(<CourseList props={propsTest}/>)
-    expect(screen.getByTestId(COURSE_LIST_TEST_IDS.textSecondCell_IS_UNDEFINED)).toBeInTheDocument()
+it('Render row thead 1', () => {
+    render(<CourseList />)
+    expect(screen.getByText('Available Courses')).toBeInTheDocument()
+})
+it('Render row thead 2', () => {
+    render(<CourseList />)
+    expect(screen.getByText('Course name')).toBeInTheDocument()
+})
+it('Render row tbody 1', () => {
+    render(<CourseList />)
+    expect(screen.getByText('ES6')).toBeInTheDocument()
+})
+it('Render row tbody 2', () => {
+    render(<CourseList />)
+    expect(screen.getByText('Webpack')).toBeInTheDocument()
+})
+it('Render row tbody 3', () => {
+    render(<CourseList />)
+    expect(screen.getByText('React')).toBeInTheDocument()
 })

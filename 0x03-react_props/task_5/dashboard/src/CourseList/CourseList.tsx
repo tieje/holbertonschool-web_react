@@ -1,6 +1,6 @@
 import { //COURSELIST_TBODY_ROW_1, COURSELIST_TBODY_ROW_2, COURSELIST_TBODY_ROW_3,
     COURSELIST_THEAD_ROW_1, COURSELIST_THEAD_ROW_2
-} from "../State/State"
+} from "../Variables/State"
 import CourseListRow, { CourseListRowPropsType } from "./CourseListRow"
 import { CourseShapePropType } from "./CourseShape"
 //import './CourseList.css'

@@ -26,7 +26,7 @@ const AppLogin = () => {
             ></input>
             <button
                 className='bg-blue-300 border border-blue-800 rounded-lg hover:bg-blue-600 focus:bg-blue-800'
-                data-testid='App-login'
+                data-testid=LOGIN_TEST_IDS.login_button
             >
                 <input type='submit' value='OK'></input>
             </button>

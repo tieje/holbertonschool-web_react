@@ -19,7 +19,7 @@ it('<App /> renders AppFooter', () => {
 })
 it('<App /> renders AppLogin', () => {
     render(<App />)
-    expect(screen.getByTestId('App-login')).toBeInTheDocument()
+    expect(screen.getByTestId(LOGIN_TEST_IDS.login_button)).toBeInTheDocument()
 })
 it('<App /> renders notifications', () => {
     const PropsOverride: AppStatePropsType = {
@@ -37,7 +37,7 @@ it('CourseList LoggedIn is true, verify Login component is not included', () => 
         isLoggedIn: true
     }
     render(<App PropsOverride={PropsOverride} />)
-    expect(screen.queryByTestId('App-login')).not.toBeInTheDocument()
+    expect(screen.queryByTestId(LOGIN_TEST_IDS.login_button)).not.toBeInTheDocument()
 })
 it('CourseList LoggedIn is true, verify CourseList component is included', () => {
     const PropsOverride: AppStatePropsType = {

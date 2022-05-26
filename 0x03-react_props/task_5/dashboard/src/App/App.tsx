@@ -7,7 +7,7 @@ import CourseList from '../CourseList/CourseList';
 import { useEffect, useState } from 'react';
 import { CourseShapePropType } from '../CourseList/CourseShape';
 import { NotificationItemShape } from '../Notifications/NotificationItemShape';
-import { DEFAULT, EOD, URGENT } from '../State/State';
+import { DEFAULT, EOD, URGENT } from '../Variables/State';
 import { getLatestNotification } from '../utils/utils';
 
 export type AppStatePropsType = {

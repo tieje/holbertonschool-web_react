@@ -18,7 +18,7 @@ it('<App /> renders AppFooter', () => {
 })
 it('<App /> renders AppLogin', () => {
     render(<App />)
-    expect(screen.getByTestId('App-login')).toBeInTheDocument()
+    expect(screen.getByTestId(LOGIN_TEST_IDS.login_button)).toBeInTheDocument()
 })
 it('<App /> renders notifications', () => {
     render(<App />)

@@ -1,6 +1,6 @@
 import './Notifications.css'
 import NotificationItem, { NotificationItemPropsType } from './NotificationItem'
-import { NOTIFICATIONS_STATE } from '../State/State'
+import { NOTIFICATIONS_STATE } from '../Variables/State'
 import { nanoid } from 'nanoid'
 
 const Notifications = () => {

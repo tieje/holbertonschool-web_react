@@ -1,4 +1,4 @@
-import { EOD, URGENT } from "../State/State"
+import { EOD, URGENT } from "../Variables/State"
 
 export type NotificationItemPropsType = {
     type?: string

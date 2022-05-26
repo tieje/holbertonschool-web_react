@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import NotificationItem, { NotificationItemPropsType } from './NotificationItem';
-import { DEFAULT } from '../State/State';
+import { DEFAULT } from '../Variables/State';
 
 
 test('Render without crashing', () => {

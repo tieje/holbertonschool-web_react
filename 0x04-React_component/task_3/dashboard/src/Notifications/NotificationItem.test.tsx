@@ -1,12 +1,13 @@
 import {
-    //cleanup,
+    cleanup,
     render, screen
 } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import NotificationItem, { NotificationItemPropsType } from './NotificationItem';
 import { DEFAULT } from '../Variables/State';
-//import userEvent from '@testing-library/user-event';
-//import { NOTIFICATION_TEST_IDS } from '../Variables/TestIds';
+import userEvent from '@testing-library/user-event';
+import { NOTIFICATION_TEST_IDS } from '../Variables/TestIds';
+import { markAsRead } from '../utils/ConsoleLogFunctions';
 
 
 test('Render without crashing', () => {
@@ -16,7 +17,7 @@ test('Render without crashing', () => {
         value: undefined
     }
     render(<NotificationItem props={defaultProps} />)
-    expect(screen.getByTestId('notification')).toBeInTheDocument()
+    expect(screen.getByTestId(NOTIFICATION_TEST_IDS.notificationItem)).toBeInTheDocument()
 })
 test('type, "default", and value, "test"', () => {
     const testProp: NotificationItemPropsType = {
@@ -36,14 +37,12 @@ test('dangerouslySetInnerHTML', () => {
     render(<NotificationItem props={testProp} />)
     expect(screen.getByText('test')).toBeInTheDocument()
 })
-/*
+
 // mock console.log
 afterEach(cleanup)
 describe('Console output', () => {
     const outputs = {
         output1: `Notification 1 has been marked as read`,
-        output2: `Notification 2 has been marked as read`,
-        output3: `Notification 3 has been marked as read`,
     }
     const originalLog = console.log
     afterEach(() => (console.log = originalLog))
@@ -51,19 +50,17 @@ describe('Console output', () => {
         const consoleOutput: string[] = []
         const mockedLog = (output: string) => consoleOutput.push(output)
         beforeEach(() => (console.log = mockedLog))
-        const markAsRead = (id?: number): void => {
-            console.log(`Notification ${id} has been marked as read`)
-        }
-        const NoteProp: NotificationItemPropsType = {
-            type: DEFAULT,
-            value: 'Another Course',
-            id: 1,
-            MarkAsRead_method: markAsRead
-        }
-        render(<NotificationItem props={NoteProp} />)
-        const notification = screen.getByTestId(NOTIFICATION_TEST_IDS.notificationItem)
-        userEvent.click(notification)
-        expect(consoleOutput).toContain('Notification 1 has been marked as read')
+        it(`Clicking notificationItem shows "${outputs.output1}"`, () => {
+            const NoteProp: NotificationItemPropsType = {
+                type: DEFAULT,
+                value: 'Another Course',
+                id: 1,
+                MarkAsRead_method: markAsRead
+            }
+            render(<NotificationItem props={NoteProp} />)
+            const notification = screen.getByTestId(NOTIFICATION_TEST_IDS.notificationItem)
+            userEvent.click(notification)
+            expect(consoleOutput).toContain(outputs.output1)
+        })
     })
 })
-*/

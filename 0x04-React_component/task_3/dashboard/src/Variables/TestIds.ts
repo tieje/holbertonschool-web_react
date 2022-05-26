@@ -1,5 +1,5 @@
 const APP_TEST_IDS = {
-    outermost_tag: 'App-Body'
+    outermost_tag: 'App-Body',
 }
 const COURSE_LIST_TEST_IDS = {
     courseListTable: 'courseListTable'
@@ -12,9 +12,13 @@ const NOTIFICATION_TEST_IDS = {
     notifications: 'notifications',
     notificationItem: 'notificationItem'
 }
+const BODY_SECTION_TEST_IDS = {
+    bodySection: 'bodySection testId',
+}
 export {
     APP_TEST_IDS,
     COURSE_LIST_TEST_IDS,
     LOGIN_TEST_IDS,
     NOTIFICATION_TEST_IDS,
+    BODY_SECTION_TEST_IDS,
 }

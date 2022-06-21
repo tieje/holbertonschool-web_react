@@ -13,5 +13,4 @@ const map2 = new Map(
         lastName: 'Salva',
     }
 );
-
-areMapsEqual(map1, map2);
+console.log(areMapsEqual(map1, map2));

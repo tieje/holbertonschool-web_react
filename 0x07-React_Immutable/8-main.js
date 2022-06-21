@@ -17,4 +17,4 @@ const grades = {
         lastName: 'salva',
     }
 };
-console.log(printBestStudents(grades))
+printBestStudents(grades)
